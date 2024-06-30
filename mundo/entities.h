@@ -5,7 +5,7 @@
 #include <stdint.h>
 //#include "../allegro/assets.h" 
 
-#include "config .h"
+#include "config.h"
 
 #define LANE_ARQUETYPE_PIXELS ((LANE_X_PIXELS) * 3)
 
