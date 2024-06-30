@@ -9,7 +9,9 @@
 #define MUSIC "audio/src/music.wav"
 
 void music (void){
-    playMusic(MUSIC, SDL_MIX_MAXVOLUME/2);
+    while(1){
+        playMusic(MUSIC, SDL_MIX_MAXVOLUME/2);
+    }
 }
 
 void levelSound (void){
