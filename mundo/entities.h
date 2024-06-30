@@ -77,7 +77,7 @@ typedef struct{
 extern const object_kind_t bus_object_kind;
 
 int32_t fillMap(map_t *_map,uint32_t _level);
-void printMap(map_t *_map);
+void printMap(map_t *_map, int32_t a);
 void printLaneObjects(lane_t *_lane,int32_t index);
 
 #endif
