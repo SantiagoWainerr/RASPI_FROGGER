@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include "entities.h"
 
+#define RPI 1
 
 const object_kind_t empty_object={
     .hitbox_width = 0,
@@ -47,7 +48,7 @@ const object_kind_t lilypad_object_kind = {
 };
 
 
-#if defined(PC)
+/*#if defined(PC)
     static const lane_t road_arquetypes[] = 
     {
         [0]=
@@ -263,8 +264,9 @@ const object_kind_t lilypad_object_kind = {
             }   
         }
     };
-//________________________________________________________________
-#elif defined(RPI)
+//_
+*/_______________________________________________________________
+#ifdef RPI
 static const lane_t road_arquetypes[] = 
     {
         [0]=
