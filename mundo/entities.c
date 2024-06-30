@@ -556,7 +556,7 @@ int32_t fillMap(map_t *_map, uint32_t _level)
         _map->lanes[i].ms_reload = 200;
         _map->lanes[i].virtual_lane_end =2*LANE_X_PIXELS; //CAMBIAR ESTO, DEBERIA SER CONST Y PREDEFINIDO EN PATRON
     }
-    //printMap(_map);
+    printMap(_map, 1);
     return 0;
 }
 
