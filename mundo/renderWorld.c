@@ -43,14 +43,14 @@ void renderWorld (map_t * map, independent_object_t * frog[], int size,int tiemp
                 break;
         }
     }
-    /* for(int i = 0; i < size; i++){
+   for(int i = 0; i < size; i++){
         if(flag_parpadeo){
             disp_write((dcoord_t) {OFFSET(frog[i]->values.position), frog[i]->y_position}, D_ON);
             
         }
         flag_parpadeo = !flag_parpadeo;
     } 
-    */
+   
     
 
     disp_update();
