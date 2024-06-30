@@ -33,7 +33,7 @@ input.o: input/input.h input/input.c driv/joydrv.h
 renderWorld.o: driv/disdrv.h driv/formas.h mundo/renderWorld.h mundo/renderWorld.c
 	gcc -Wall -c mundo/renderWorld.c
  
-entities.o: mundo/entities.h -D RPI
+entities.o: mundo/entities.h -D RPI mundo/entities.c mundo/config.h
 	gcc -Wall -c mundo/entities.c
 
 clean:
