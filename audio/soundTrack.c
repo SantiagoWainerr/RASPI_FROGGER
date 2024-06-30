@@ -10,7 +10,6 @@
 
 void music (void){
     playMusic(MUSIC, SDL_MIX_MAXVOLUME/2);
-    endAudio();
 }
 
 void levelSound (void){
