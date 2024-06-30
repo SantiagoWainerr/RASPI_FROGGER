@@ -5,7 +5,7 @@
 #define STEP "src/step.wav"
 #define LIFE "src/looseLife.wav"
 #define TIME "src/runningOutOfTime.wav"
-#define LEVEL "src/nextLevel.wav"
+#define LEVEL "audio/src/nextLevel.wav"
 
 void levelSound (void){
     playSound(LEVEL, SDL_MIX_MAXVOLUME);
