@@ -1,5 +1,5 @@
-ejecutable: inicialization/inicialization.o main.o driv/formas.o driv/disdrv.o driv/joydrv.o menus/menu.o menus/pause.o menus/top.o finalAnimation/final.o mundo/renderWorld.o mundo/entities.o audio/soundTrack.o
-	gcc inicialization/inicialization.o main.o driv/formas.o driv/joydrv.o driv/disdrv.o menus/menu.o menus/pause.o menus/top.o finalAnimation/final.o mundo/renderWorld.o mundo/entities.o audio/soundTrack.o -o ejecutable -Wall
+ejecutable: inicialization/inicialization.o main.o driv/formas.o driv/disdrv.o driv/joydrv.o menus/menu.o menus/pause.o menus/top.o finalAnimation/final.o mundo/renderWorld.o mundo/entities.o audio/soundTrack.o audio/libAudioSDL2.o
+	gcc inicialization/inicialization.o main.o driv/formas.o driv/joydrv.o driv/disdrv.o menus/menu.o menus/pause.o menus/top.o finalAnimation/final.o mundo/renderWorld.o mundo/entities.o audio/soundTrack.o audio/libAudioSDL2.o -o ejecutable -Wall
 
 main.o: main.c inicialization/inicialization.h driv/formas.h menus/menu.h menus/pause.h menus/top.h finalAnimation/final.h mundo/renderWorld.h mundo/entities.h  audio/soundTrack.h
 	gcc -Wall -c main.c
