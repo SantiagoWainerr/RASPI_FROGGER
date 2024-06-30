@@ -4,7 +4,7 @@ ejecutable: inicialization/inicialization.o main.o driv/formas.o driv/disdrv.o d
 main.o: main.c inicialization/inicialization.h driv/formas.h menus/menu.h menus/pause.h menus/top.h finalAnimation/final.h mundo/renderWorld.h mundo/entities.h
 	gcc -Wall -c main.c
 
-inicialization.o: inicialization/inicialization.c  inicialization/inicialization.h driv/formas.h driv/disdrv.h driv/joydrv.h
+inicialization.o: inicialization/inicialization.c  inicialization/inicialization.h driv/formas.h driv/disdrv.h driv/joydrv.h audio/audio.h
 	gcc -Wall -c inicialization/inicialization.c
 
 formas.o: driv/formas.c driv/formas.h driv/disdrv.h
@@ -23,6 +23,9 @@ final.o: finalAnimation/final.c finalAnimation/final.h driv/disdrv.h driv/joydrv
 	gcc -Wall -c finalAnimation/final.c
 
 # HASTA ACA PUSHEE
+
+soundTrack.o: soundTrack.h audio.h soundTrack.c 
+	gcc -Wall -c soundTrack.c
 
 input.o: input/input.h input/input.c driv/joydrv.h
 	gcc -Wall -c finalAnimation

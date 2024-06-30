@@ -12,6 +12,7 @@
 #include "mundo/entities.h"
 #include "mundo/config.h"
 #include "mundo/renderWorld.h"
+#include "audio/soundTrack.h"
 
 independent_object_t frog = {
     .values.position = 5,
@@ -119,6 +120,7 @@ int main (void){
     while(n != 0){
         switch(n){
             case START:
+                levelSound();
                 i = pause();
                 if(i == CONTINUE){
                     disp_clear();
