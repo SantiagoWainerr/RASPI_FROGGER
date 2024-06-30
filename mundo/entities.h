@@ -1,14 +1,15 @@
 #ifndef ENTITIES_H
 #define ENTITIES_H
 #include <stdint.h>
-// #include "../allegro/assets.h"
+//#include "../allegro/assets.h" 
+
 #include "config.h"
 
 #define LANE_ARQUETYPE_PIXELS ((LANE_X_PIXELS) * 3)
 
 typedef struct {
     char is_animating;
-    // assets_t * animation_frame;
+  //  assets_t * animation_frame;
 } animation_t;
 
 
@@ -23,7 +24,10 @@ typedef struct{
     uint32_t canMove :1;
 }object_attributes_t;
 
+
+
 typedef struct{
+
     const object_graphics_t graphics;
     const object_attributes_t attr;
     const uint32_t hitbox_width; //From left side, should correspond with graphics width!!!
@@ -56,8 +60,10 @@ typedef struct{
     int32_t ms_reload;  //ms per movement
     background_t background; //background
     object_kind_t * kind; //all dependant objects on the lane are of the same kind
-    uint32_t virtual_lane_length; //True logic lane lenght, DOESN'T correspond to visible lane length in-game
+    
     object_t objects[MAX_OBJECTS_PER_LANE]; //every dependant object variable data
+    int32_t virtual_lane_end; //True logic lane lenght, DOESN'T correspond to visible lane length in-game
+    int32_t virtual_lane_start; //ALWAYS LESS THAN 0-.kind->hitbox_width
     enum{LEFT,RIGHT}direction; //Direction of movement of the lane, either LEFT or RIGHT
 }lane_t;
 
@@ -66,6 +72,9 @@ typedef struct{
 }map_t;
 
 
+extern const object_kind_t bus_object_kind;
+
 int32_t fillMap(map_t *_map,uint32_t _level);
 void printMap(map_t *_map);
+void printLaneObjects(lane_t *_lane,int32_t index);
 #endif
