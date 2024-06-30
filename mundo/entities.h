@@ -1,9 +1,11 @@
+
 #ifndef ENTITIES_H
+
 #define ENTITIES_H
 #include <stdint.h>
 //#include "../allegro/assets.h" 
 
-#include "config.h"
+#include "config .h"
 
 #define LANE_ARQUETYPE_PIXELS ((LANE_X_PIXELS) * 3)
 
@@ -77,4 +79,5 @@ extern const object_kind_t bus_object_kind;
 int32_t fillMap(map_t *_map,uint32_t _level);
 void printMap(map_t *_map);
 void printLaneObjects(lane_t *_lane,int32_t index);
+
 #endif
