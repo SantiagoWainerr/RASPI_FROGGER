@@ -537,8 +537,8 @@ int32_t fillMap(map_t *_map, uint32_t _level)
             case 12:
             case 13:
             case 14:
-                //_map->lanes[i] = road_arquetypes[rand() % road_arquetypes_elements];
-                _map->lanes[i] = road_arquetypes[0];
+                _map->lanes[i] = road_arquetypes[rand() % road_arquetypes_elements];
+                //_map->lanes[i] = road_arquetypes[0];
                 break;
             case 15:
                 _map->lanes[i] = grass_arquetypes[rand() % grass_arquetypes_elements];
