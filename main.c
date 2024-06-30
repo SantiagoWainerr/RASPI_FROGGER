@@ -37,6 +37,7 @@ int main (void){
     while(n != 0){
         switch(n){
             case START:
+                music();
                 levelSound();
                 i = pause();
                 if(i == CONTINUE){
