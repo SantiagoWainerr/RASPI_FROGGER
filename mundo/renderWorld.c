@@ -29,17 +29,17 @@ void renderWorld (map_t * map, independent_object_t * frog[], int size,int tiemp
         }
         switch ((map->lanes[row]).background){
             case water:
-                horizontalLine(12,(dcoord_t) {2, row});
+                horizontalLine(12,(dcoord_t) {2, OFFSET_y(row)});
                 if(((map->lanes)->objects)->doesExist && OFFSET(((map->lanes)->objects)->position) + 3 <=12){
                     for(int i = 0; i < MAX_OBJECTS_PER_LANE; i++){
-                        horizontalLineOff(aux, (dcoord_t){OFFSET(((map->lanes[row]).objects[i]).position), row});
+                        horizontalLineOff(aux, (dcoord_t){OFFSET(((map->lanes[row]).objects[i]).position), OFFSET_y(row)});
                     }
                 }
                 break;
             default: // no importa que sea pasto o calle
                 for(int i = 0; i < MAX_OBJECTS_PER_LANE; i++){
                     if(((map->lanes)->objects)->doesExist && OFFSET(((map->lanes)->objects)->position) + 3 <=12){
-                        horizontalLine(aux, (dcoord_t){OFFSET(((map->lanes[row]).objects[i]).position), row});
+                        horizontalLine(aux, (dcoord_t){OFFSET(((map->lanes[row]).objects[i]).position), OFFSET_y(row)});
                     }
                 }
                 break;
