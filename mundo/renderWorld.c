@@ -40,6 +40,8 @@ void renderWorld (map_t * map, independent_object_t * frog[], int size,int tiemp
                 for(int i = 0; i < MAX_OBJECTS_PER_LANE; i++){
                     if(((map->lanes)->objects)->doesExist && OFFSET(((map->lanes)->objects)->position) + 3 <=12){
                         horizontalLine(aux, (dcoord_t){OFFSET(((map->lanes[row]).objects[i]).position), OFFSET_y(row)});
+                    }else{
+                        horizontalLine(aux, (dcoord_t){OFFSET(((map->lanes[row]).objects[i]).position), OFFSET_y(row)});
                     }
                 }
                 break;
