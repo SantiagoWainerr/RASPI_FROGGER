@@ -3,8 +3,8 @@
 
 #include "renderWorld.h"
 
-#define OFFSET(v) (LANE_X_PIXELS - v)
-#define OFFSET_y(v) (LANE_Y_PIXELS - v)
+#define OFFSET(v) (12 - v)
+#define OFFSET_y(v) (15 - v)
 
 
 #define DIVISOR 4
