@@ -265,7 +265,7 @@ const object_kind_t lilypad_object_kind = {
         }
     };
 //_
-*/_______________________________________________________________
+*/
 #ifdef RPI
 static const lane_t road_arquetypes[] = 
     {
