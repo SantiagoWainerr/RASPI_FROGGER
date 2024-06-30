@@ -33,12 +33,12 @@ void renderWorld (map_t * map, independent_object_t * frog[], int size,int tiemp
             case water:
                 horizontalLine(12,COORDENADA(2, OFFSET_y(row)));
                 if(existe && OFFSET(position) < 12){
-                    horizontalLineOff(aux, COORDENADA(OFFSET(position) + 2, OFFSET_y(row)));
+                    horizontalLineOff(aux, COORDENADA(OFFSET(position), OFFSET_y(row)));
                 }
                 break;
             default: // no importa que sea pasto o calle
                 if(existe && OFFSET(position) < 12){
-                    horizontalLine(aux, COORDENADA(OFFSET(position) + 2, OFFSET_y(row)));
+                    horizontalLine(aux, COORDENADA(OFFSET(position), OFFSET_y(row)));
                 }
                 break;
         }
