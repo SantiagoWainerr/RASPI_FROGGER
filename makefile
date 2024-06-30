@@ -1,5 +1,5 @@
 ejecutable: inicialization/inicialization.o main.o driv/formas.o driv/disdrv.o driv/joydrv.o menus/menu.o menus/pause.o menus/top.o finalAnimation/final.o mundo/renderWorld.o mundo/entities.o audio/soundTrack.o audio/libAudioSDL2.o -lSDL2
-	gcc inicialization/inicialization.o main.o driv/formas.o driv/joydrv.o driv/disdrv.o menus/menu.o menus/pause.o menus/top.o finalAnimation/final.o mundo/renderWorld.o mundo/entities.o audio/soundTrack.o audio/libAudioSDL2.o -lSDL2 -o ejecutable -Wall
+	gcc -D RPI inicialization/inicialization.o main.o driv/formas.o driv/joydrv.o driv/disdrv.o menus/menu.o menus/pause.o menus/top.o finalAnimation/final.o mundo/renderWorld.o mundo/entities.o audio/soundTrack.o audio/libAudioSDL2.o -lSDL2 -o ejecutable -Wall
 
 main.o: main.c inicialization/inicialization.h driv/formas.h menus/menu.h menus/pause.h menus/top.h finalAnimation/final.h mundo/renderWorld.h mundo/entities.h  audio/soundTrack.h
 	gcc -Wall -c main.c
@@ -33,7 +33,7 @@ input.o: input/input.h input/input.c driv/joydrv.h
 renderWorld.o: driv/disdrv.h driv/formas.h mundo/renderWorld.h mundo/renderWorld.c
 	gcc -Wall -c mundo/renderWorld.c
  
-entities.o: mundo/entities.h mundo/entities.c mundo/config.h -D RPI 
+entities.o: mundo/entities.h mundo/entities.c mundo/config.h
 	gcc -Wall -D RPI -c mundo/entities.c
 
 clean:
