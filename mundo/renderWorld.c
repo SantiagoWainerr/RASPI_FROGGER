@@ -4,6 +4,8 @@
 #include "renderWorld.h"
 
 #define OFFSET(v) (LANE_X_PIXELS - v)
+#define OFFSET_y(v) (LANE_Y_PIXELS - v)
+
 
 #define DIVISOR 4
 
@@ -21,7 +23,9 @@ void renderWorld (map_t * map, independent_object_t * frog[], int size,int tiemp
     verticalLine(16-contador, (dcoord_t){15, contador});
     
     int aux;
-    for(int row = 15; row > 0; row--){
+    int row;
+    for(int i = 0; i < 15; i++){
+        row = OFFSET_y(row);
         if(((map->lanes)->objects)->doesExist){
             aux = map->lanes[row].kind->hitbox_width;
         }
