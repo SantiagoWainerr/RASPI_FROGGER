@@ -21,7 +21,7 @@ void renderWorld (map_t * map, independent_object_t * frog[], int size,int tiemp
     verticalLine(16-contador, (dcoord_t){15, contador});
     
     int aux;
-    for(int row = 0; row < 15; row++){
+    for(int row = 15; row > 0; row--){
         if(((map->lanes)->objects)->doesExist){
             aux = map->lanes[row].kind->hitbox_width;
         }
